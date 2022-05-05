@@ -205,9 +205,17 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .brand {
+        width: 140px;
+    }
+
+    .home .home-content {
+        margin-top: 35px;
+    }
+
     .nav-component {
         position: absolute;
-        padding: 10px 14px 9px;
+        padding: 12px 14px 11px;
     }
 
     .nav-component .row {

@@ -1,0 +1,239 @@
+:root {
+    --colorFondo: #F5F5F5;
+    --colorFondoGris: #E8EBEC;
+    --colorWhite: #f1f1f1;
+    --colorBlack: #232A3B;
+    --colorRed: #EC1A22;
+    --colorBlackAzul: #201C6A;
+    --colorBlackAzulBtn: #2D3092;
+    --colorBlackGris: #585568;
+    --colorMoradoRgb: #E8E6F6;
+    --colorGrisOpaco: #6a737d;
+    --colorDesGris: #444d56;
+
+    /*scroll colores*/
+    --colorFondoScroll: #fafafa;
+    --colorBorderScroll: #e8e8e8;
+    --colorBg: #c1c1c1;
+
+    /*rgb*/
+    --colorBlackAzul50: rgb(81 78 95 / 50%);
+
+    /*font weight*/
+    --fontWeightHeavy: 900;
+    --fontWeightSemiBold: 600;
+    --fontWeightMedium: 500;
+    --fontWeightBold: bold;
+    --fontWeightNormal: normal;
+
+    /*tamaño de textos*/
+    --fontSize16: 16px;
+    --fontSize15: 15px;
+    --fontSize14: 14px;
+    --fontSize12: 12px;
+
+    /*paddings*/
+    --pd024: 0 24px;
+
+    /*line height*/
+    --lineHeight: 20px;
+
+    /*fondo borroso filter*/
+    --colorFilterGris: saturate(180%) blur(20px);
+}
+
+.nav-component {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 99;
+    padding: 15px 24px 14px;
+    border-bottom: 1px solid #e1e4e8;
+    background-color: hsla(0, 0%, 100%, .85);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+.nav-component .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-component .brand a {
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    line-height: 32px;
+}
+
+/* home */
+.home {
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    /*background-color: var(--colorFondo);*/
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 24px;
+    min-height: 100vh;
+}
+
+.home .full-screen {
+    min-height: 90vh;
+}
+
+.home .home-content {
+    margin-top: 85px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    gap: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 44px 0;
+}
+
+.home .home-content .block {
+    width: 54%;
+}
+
+.home .home-content .block:nth-child(2) {
+    width: auto;
+}
+
+.home .home-content .block .btnrgbmorad {
+    margin-bottom: 15px;
+}
+
+
+/* LINEAS ESTRATEGICAS CATEGORIA*/
+.lineasestra {
+    padding: 100px 24px;
+}
+
+.lineasestra .section-title h2:before {
+    left: 30%;
+}
+
+
+/*eleccion de clases blog*/
+.blogs {
+    padding: 100px 24px;
+}
+
+.blogs .section-title h2:before {
+    left: 40%;
+    right: 40%;
+}
+
+
+
+/*footer pie*/
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #e1e4e8;
+    padding: 50px 24px 1rem;
+}
+
+.footer .grid-container {
+    margin: auto;
+    /*display: flex;
+    justify-content: space-between;
+    align-items: flex-start;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 44px;
+    margin-bottom: 3rem;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1060px) {
+    .home .home-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 76px;
+    }
+
+    .home .home-content .block {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home .home-content .block:nth-child(2) {
+        display: none;
+    }
+
+    ._bnrdbt {
+        justify-content: center;
+    }
+
+    .btnrgbmorad {
+        margin: 0 auto;
+    }
+
+    .footer .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-component {
+        position: absolute;
+        padding: 10px 14px 9px;
+    }
+
+    .nav-component .row {
+        justify-content: center;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .footer {
+        padding-bottom: 6rem;
+    }
+
+    .footer .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footer .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+

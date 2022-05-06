@@ -88,9 +88,4 @@ nav {
     }
 }
 
-@media only screen and (max-width: 445px) {
-    .nav__block_ux {
-        width: 94%;
-    }
-}
 

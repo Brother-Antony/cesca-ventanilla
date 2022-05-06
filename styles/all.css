@@ -632,7 +632,7 @@ h4 {
 /*botones, btns*/
 .btnrgbmorad {
     display: inline-block;
-    padding: 9px 34px 10px;
+    padding: 9px 34px 8px;
     border-radius: 100px;
     background-color: #fdfefe;
     color: #4b4efc;
@@ -850,6 +850,11 @@ h1 {
 }
 
 @media only screen and (max-width: 767px) {
+    .btnrgbmorad {
+        font-size: .65rem;
+        padding: 8px 24px 7px;
+    }
+
     .heading-display {
         font-size: 3rem;
         line-height: 3.25rem;

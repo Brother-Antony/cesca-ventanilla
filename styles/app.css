@@ -51,7 +51,7 @@
     z-index: 99;
     padding: 15px 24px 14px;
     border-bottom: 1px solid #e1e4e8;
-    background-color: hsla(0, 0%, 100%, .85);
+    background-color: hsla(0, 0%, 100%, .95);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
 }
@@ -70,7 +70,7 @@
 .navbar ul {
     display: flex;
     align-items: center;
-    gap: 51px;
+    gap: 24px;
 }
 
 .navbar ul li {
@@ -117,6 +117,17 @@
 
 .home .home-content .block .btnrgbmorad {
     margin-bottom: 15px;
+}
+
+
+/*become precios*/
+.become {
+    padding: 100px 24px;
+}
+
+.become .section-title h2:before {
+    left: 40%;
+    right: 40%;
 }
 
 

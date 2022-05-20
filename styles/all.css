@@ -67,8 +67,12 @@ button {
     cursor: pointer;
 }
 
+.text-weight-medium {
+    font-weight: 500;
+}
+
 .container {
-    max-width: 1120px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -163,6 +167,78 @@ img {
 	flex-direction: column;
 }
 
+/*slider*/
+.content-slider {
+    position: absolute;
+    inset: 0;
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+
+.slider__section {
+  width: 100%;
+}
+
+.slider__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+._bnrdbt {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-prev, .btn-next {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    border: 2px solid var(--colorRed);
+    background-color: transparent;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    font-family: monospace;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.btn-prev:hover, .btn-next:hover {
+    background: var(--colorRed);
+    box-shadow: 0px 3px 20px rgba(236, 26, 34, .3);
+}
+
+.btn-prev:hover svg, .btn-next:hover svg {
+    stroke: white;
+}
+
+.btn-prev svg, .btn-next svg {
+    fill: none;
+    width: 18px;
+    height: 18px;
+    stroke: currentcolor;
+    stroke-width: 4;
+    overflow: visible;
+    stroke: var(--colorRed);
+}
+
+.btn-next svg {
+    transform: rotate(180deg);
+}
+
+
 /*width*/
 .w340 {
     width: 340px;
@@ -245,7 +321,7 @@ img {
 .qualities_icon {
     height: 64px;
     width: 64px;
-    border-radius: 15px;
+    border-radius: 50%;
     border: 1px solid #e1e4e8;
     background-color: rgb(75 78 252 / 2.8%);
     display: flex;
@@ -254,7 +330,7 @@ img {
 }
 
 .qualities_icon i {
-    font-size: 35px;
+    font-size: 30px;
     color: rgb(75 78 252 / 100%);
     transition: all .3s ease;
 }
@@ -325,6 +401,11 @@ img {
     overflow: hidden;
     background-color: #fff;
     border: 1px solid #e1e4e8;
+    transition: box-shadow .5s ease;
+}
+
+.shop_item-wrapper:hover {
+    box-shadow: 0 10px 70px 0 rgb(27 31 35 / 15%);
 }
 
 .shop_item-wrapper .item-card_image {
@@ -796,7 +877,7 @@ h4 {
 .heading-display {
     font-family: Satoshi, sans-serif;
     font-size: 4.5rem;
-    line-height: 4.5rem;
+    line-height: 5.5rem;
     font-weight: var(--fontWeightHeavy);
     letter-spacing: -1.44px;
 }

@@ -70,12 +70,70 @@
 .navbar ul {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     gap: 24px;
+=======
+    gap: 7px;
+>>>>>>> 348507e (cambio)
 }
 
 .navbar ul li {
+    position: relative;
     display: inline-block;
     line-height: 32px;
+    padding: .5rem .75rem;
+}
+
+.navbar ul li:hover .w-dropdown-list {
+    opacity: 1;
+    visibility: visible;
+    margin-top: .5rem;
+}
+
+.nav_dropdown-list {
+    min-width: 25rem;
+    padding: 0.75rem;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 10px 70px 0 rgb(27 31 35 / 15%);
+    transition: all .3s ease;
+    z-index: 1;
+}
+
+.w-dropdown-list {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 1rem;
+    left: 0;
+}
+
+.nav_dropdown-link {
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    color: #1b1f23;
+    font-size: .875rem;
+    line-height: 1.5rem;
+}
+
+.nav_dropdown-link:hover {
+    background-color: #f2f5f8;
+    text-decoration: none;
+}
+
+.dropdown_image-wrap {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    flex: 0 0 auto;
+}
+
+.dropdown_image {
+    width: 100%;
 }
 
 /* home */
@@ -83,12 +141,22 @@
     position: relative;
     overflow: hidden;
     cursor: default;
-    /*background-color: var(--colorFondo);*/
-    background-image: url(../img/fondo.jpg);
+    /*background-image: url(../img/fondo.jpg);*/
     background-size: cover;
     background-position: center;
     padding: 0 24px;
     min-height: 100vh;
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(232 235 236 / 85%);
+    background-position: center;
+    backdrop-filter: saturate(180%) blur(35px);
+    -webkit-backdrop-filter: saturate(180%) blur(35px);
+    width: 55%;
 }
 
 .home .full-screen {
@@ -109,10 +177,6 @@
 
 .home .home-content .block {
     width: 54%;
-}
-
-.home .home-content .block:nth-child(2) {
-    width: auto;
 }
 
 .home .home-content .block .btnrgbmorad {
@@ -185,8 +249,11 @@
 
 
 
-
 @media only screen and (max-width: 1060px) {
+    .home::after {
+        width: 100%;
+    }
+
     .home .home-content {
         flex-direction: column;
         justify-content: center;
@@ -215,7 +282,7 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 970px) {
     .brand {
         width: 140px;
     }
